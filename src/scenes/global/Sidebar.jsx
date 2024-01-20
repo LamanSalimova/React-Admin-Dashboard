@@ -111,7 +111,7 @@ export default function Sidebar() {
                   Lana.S
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                  VP Fancy Admin
+                  VP Admin
                 </Typography>
               </Box>
             </Box>
