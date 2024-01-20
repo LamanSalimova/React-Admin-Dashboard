@@ -24,7 +24,7 @@ export default function Dashboard() {
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
 
-        <Box>
+        <Box display={{ xs: "none", sm: "none", md: "block" }}>
           <Button
             sx={{
               backgroundColor: colors.blueAccent[700],
@@ -44,12 +44,12 @@ export default function Dashboard() {
       <Box
         display="grid"
         gridTemplateColumns="repeat(12, 1fr)"
-        gridAutoRows="140px"
+        gridAutoRows={{ xs: "auto", sm: "auto", md: "140px" }}
         gap="20px"
       >
         {/* ROW 1 */}
         <Box
-          gridColumn="span 3"
+          gridColumn={{ xs: "span 12", sm: "span 12", md: "span 3" }}
           backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
@@ -68,7 +68,7 @@ export default function Dashboard() {
           />
         </Box>
         <Box
-          gridColumn="span 3"
+          gridColumn={{ xs: "span 12", sm: "span 12", md: "span 3" }}
           backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
@@ -87,7 +87,7 @@ export default function Dashboard() {
           />
         </Box>
         <Box
-          gridColumn="span 3"
+          gridColumn={{ xs: "span 12", sm: "span 12", md: "span 3" }}
           backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
@@ -106,7 +106,7 @@ export default function Dashboard() {
           />
         </Box>
         <Box
-          gridColumn="span 3"
+          gridColumn={{ xs: "span 12", sm: "span 12", md: "span 3" }}
           backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
@@ -127,8 +127,8 @@ export default function Dashboard() {
 
         {/* ROW 2 */}
         <Box
-          gridColumn="span 8"
-          gridRow="span 2"
+          gridColumn={{ xs: "span 12", sm: "span 12", md: "span 8" }}
+          gridRow={{ xs: "span 2", sm: "span 2", md: "span 2" }}
           backgroundColor={colors.primary[400]}
         >
           <Box
@@ -167,8 +167,8 @@ export default function Dashboard() {
           </Box>
         </Box>
         <Box
-          gridColumn="span 4"
-          gridRow="span 2"
+          gridColumn={{ xs: "span 12", sm: "span 12", md: "span 4" }}
+          gridRow={{ xs: "span 2", sm: "span 2", md: "span 2" }}
           backgroundColor={colors.primary[400]}
           overflow="auto"
         >
@@ -219,8 +219,8 @@ export default function Dashboard() {
 
         {/* ROW 3 */}
         <Box
-          gridColumn="span 4"
-          gridRow="span 2"
+          gridColumn={{ xs: "span 12", sm: "span 12", md: "span 4" }}
+          gridRow={{ xs: "span 2", sm: "span 2", md: "span 2" }}
           backgroundColor={colors.primary[400]}
           p="30px"
         >
@@ -245,8 +245,8 @@ export default function Dashboard() {
           </Box>
         </Box>
         <Box
-          gridColumn="span 4"
-          gridRow="span 2"
+          gridColumn={{ xs: "span 12", sm: "span 12", md: "span 4" }}
+          gridRow={{ xs: "span 2", sm: "span 2", md: "span 2" }}
           backgroundColor={colors.primary[400]}
         >
           <Typography
@@ -261,8 +261,8 @@ export default function Dashboard() {
           </Box>
         </Box>
         <Box
-          gridColumn="span 4"
-          gridRow="span 2"
+          gridColumn={{ xs: "span 12", sm: "span 12", md: "span 4" }}
+          gridRow={{ xs: "span 2", sm: "span 2", md: "span 2" }}
           backgroundColor={colors.primary[400]}
           padding="30px"
         >

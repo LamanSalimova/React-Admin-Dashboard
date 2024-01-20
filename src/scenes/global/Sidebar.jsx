@@ -47,6 +47,7 @@ export default function Sidebar() {
       sx={{
         "& .pro-sidebar-inner": {
           background: `${colors.primary[400]} !important`,
+          height: "150% !important",
         },
         "& .pro-icon-wrapper": {
           backgroundColor: "transparent !important",
@@ -62,7 +63,14 @@ export default function Sidebar() {
         },
       }}
     >
-      <ProSidebar collapsed={isCollapsed}>
+      <ProSidebar
+        collapsed={isCollapsed}
+        className={{
+          xs: "pro-sidebar collapsed",
+          sm: "pro-sidebar collapsed",
+          md: "pro-sidebar",
+        }}
+      >
         <Menu iconShape="square">
           {/* LOGO AND MENU ICON */}
           <MenuItem
@@ -75,7 +83,7 @@ export default function Sidebar() {
           >
             {!isCollapsed && (
               <Box
-                display="flex"
+                display={{ xs: "none", sm: "none", md: "flex" }}
                 justifyContent="space-between"
                 alignItems="center"
                 ml="15px"
@@ -91,7 +99,7 @@ export default function Sidebar() {
           </MenuItem>
 
           {!isCollapsed && (
-            <Box mb="25px">
+            <Box mb="25px" display={{ xs: "none", sm: "none", md: "block" }}>
               <Box display="flex" justifyContent="center" alignItems="center">
                 <img
                   alt="profile-user"
@@ -176,14 +184,6 @@ export default function Sidebar() {
               selected={selected}
               setSelected={setSelected}
             />
-            <Item
-              title="FAQ Page"
-              to="/faq"
-              icon={<HelpOutlineOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-
             <Typography
               variant="h6"
               color={colors.grey[300]}

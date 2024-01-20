@@ -8,7 +8,6 @@ import Bar from "../scenes/bar/Bar";
 import Form from "../scenes/form/Form";
 import Line from "../scenes/line/Line";
 import Pie from "../scenes/pie/Pie";
-import FAQ from "../scenes/faq/Faq";
 
 export const routes = [
   { path: "/", element: Dashboard },
@@ -19,7 +18,6 @@ export const routes = [
   { path: "/bar", element: Bar },
   { path: "/pie", element: Pie },
   { path: "/line", element: Line },
-  { path: "/faq", element: FAQ },
   { path: "/calendar", element: Calendar },
   { path: "/geography", element: Geography },
 ];
